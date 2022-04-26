@@ -11,6 +11,7 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.widget.ImageViewCompat
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 
@@ -19,7 +20,9 @@ class PlainOldActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_plain_old)
+        //setContentView(R.layout.activity_plain_old)
+
+        val binding: ActivityPlainOldBinding = DataBindingUtil.setContentView(this, R.layout.activity_plain_old)
 
         updateName()
         updateLikes()
